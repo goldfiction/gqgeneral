@@ -1,5 +1,4 @@
 gqcoffee=require "gqcoffee"
-o={}
 log=console.log
 gqcoffee.q_load().then ()->
   eval(coffee['coffee/test1'])
