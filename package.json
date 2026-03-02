@@ -1,0 +1,17 @@
+{
+    "main":"index.coffee",
+    "dependencies":{
+        "gqcoffee":"1.0.25",
+        "coffeescript":"2.5.1",
+        "coffee-script":"1.0.0"
+    },
+  "scripts": {
+    "start": "node --require coffeescript/register index.coffee",
+    "test": "coffee test.coffee",
+    "test:watch": "nodemon --delay 2 -q -x \"npm test\"",
+    "test:slow": "mocha --openssl-legacy-provider --require coffeescript/register --no-color --reporter min -t 20000 test/test.slow.coffee",
+    "inst": "npm install --no-bin-links --no-optional --omit=optional --ignore-scripts",
+    "install:prod": "npm install --production",
+    "install:prod2": "npm install --omit=dev --no-bin-links"
+  }
+}
